@@ -1,15 +1,22 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const TO = process.env.CONTACT_TO || "";
+export const runtime = "nodejs";            // asegura Node runtime (no Edge)
+export const dynamic = "force-dynamic";     // evita intentos de prerender
 
 export async function POST(req: Request) {
   try {
-    if (!process.env.RESEND_API_KEY || !TO) {
+    const RESEND_API_KEY = process.env.RESEND_API_KEY;
+    const TO = process.env.CONTACT_TO || "";
+
+    if (!RESEND_API_KEY || !TO) {
       return new NextResponse("Missing RESEND_API_KEY or CONTACT_TO", { status: 500 });
     }
+
     const { name, email, message } = await req.json();
+
+    // Instanciar RESEND *dentro* del handler, no en el top-level
+    const resend = new Resend(RESEND_API_KEY);
 
     const { error } = await resend.emails.send({
       from: "LuLab Contacto <onboarding@resend.dev>",
