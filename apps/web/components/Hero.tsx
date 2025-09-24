@@ -18,7 +18,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-white/70"
         >
           <span className="dot"></span>
-          <span className="text-sm text-graytext">Ingeniería + Diseño que vende</span>
+          <span className="text-sm text-graytext">Software a medida con foco en resultados</span>
         </motion.div>
 
         <motion.h1
@@ -38,8 +38,8 @@ export default function Hero() {
           transition={{ delay: 0.1, duration: 0.6 }}
           className="mt-4 text-lg text-graytext max-w-2xl mx-auto"
         >
-          Construimos plataformas a medida, integramos tus sistemas y explotamos tus datos con IA.
-          Menos fricción, más resultados medibles en semanas, no meses.
+          Construimos a medida y operamos tres soluciones que aceleran ventas y operación:
+          WhatsApp Bot + Yappy, Copiloto Cotización→Factura y Link-in-Bio Store.
         </motion.p>
 
         <motion.div
@@ -49,8 +49,8 @@ export default function Hero() {
           className="mt-8 flex items-center justify-center gap-3"
         >
           <a href="#contacto" className="btn-primary">Quiero resultados</a>
-          <a href="#productos" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 font-medium border border-black/10 bg-white hover:bg-white/70">
-            Ver ofertas
+          <a href="#soluciones" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 font-medium border border-black/10 bg-white hover:bg-white/70">
+            Ver nuestras soluciones
           </a>
         </motion.div>
 
@@ -58,7 +58,7 @@ export default function Hero() {
         <div className="grid md:grid-cols-3 gap-4 mt-12">
           {[
             ["< 14 días", "Primer entregable navegable"],
-            ["Garantía", "Si no te aporta, lo re-hacemos"],
+            ["Continuidad", "Soporte y mejoras por sprints"],
             ["Seguridad", "Buenas prácticas y control de acceso"]
           ].map(([title, desc], i) => (
             <div key={i} className="glass rounded-3xl p-5">
