@@ -7,61 +7,59 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      {/* Productos */}
+
+      {/* Soluciones (sin precios) */}
       <Section
-        id="productos"
+        id="soluciones"
         eyebrow="Qué vendemos"
-        title="3 ofertas claras para generar valor desde la primera semana"
-        subtitle="Diseñadas para impactar rápido, medible y con estándares de nivel enterprise."
+        title="Tres soluciones que resuelven problemas reales"
+        subtitle="Operamos estos productos de negocio y también construimos a medida según tu proceso."
       >
         <div className="grid md:grid-cols-3 gap-6">
           <ProductCard
-            title="Plataformas a Medida"
-            price="Desde $8,900"
+            title="WhatsApp Bot + Yappy (ventas/reservas)"
             bullets={[
-              "Apps web y portales con diseño premium",
-              "Autenticación, roles y paneles",
-              "Escalable en la nube (Vercel/AWS)"
+              "Atiende y toma pedidos o reservas 24/7",
+              "Calcula total y cobra con Yappy en el mismo chat",
+              "Registra cada pedido en una hoja o sistema"
             ]}
-            example="Ejemplo: portal de clientes con pagos y notificaciones."
+            example="Restaurante: el cliente pide, paga por Yappy y queda todo registrado automáticamente."
           />
           <ProductCard
-            title="Integraciones & Automatización"
-            price="Desde $3,500"
+            title="Copiloto Cotización → Factura (FE)"
             bullets={[
-              "Conectamos ERP/CRM/E-commerce con tus apps",
-              "APIs y webhooks robustos",
-              "Automatizamos procesos repetitivos"
+              "Del chat normal a cotización y factura electrónica",
+              "Cálculo correcto de ITBMS y totales",
+              "Genera PDF listo para enviar por correo o WhatsApp"
             ]}
-            example="Ejemplo: pedidos del e-commerce directo al ERP con inventario en vivo."
+            example="Servicios A/C: el equipo escribe la solicitud y el sistema genera cotización y factura en minutos."
           />
           <ProductCard
-            title="Data + IA Aplicada"
-            price="Desde $4,900"
+            title="Link-in-Bio Store + WhatsApp + Yappy"
             bullets={[
-              "Dashboards con métricas de negocio",
-              "Bots privados (RAG) sobre tus documentos",
-              "Alertas y predicciones accionables"
+              "Catálogo de 1 página con pago claro",
+              "Integra WhatsApp para dudas y post-venta",
+              "Ideal para lanzamientos, eventos o catálogos simples"
             ]}
-            example="Ejemplo: dashboard de ventas + bot interno que responde sobre contratos."
+            example="Emprendimiento: comparte un link con 6 productos, cobro Yappy y atención por WhatsApp."
           />
         </div>
       </Section>
 
-      {/* Por qué LuLab */}
+      {/* Por qué nosotros */}
       <Section
         id="porque"
         eyebrow="Por qué LuLab"
-        title="Te compran resultados: nosotros los entregamos"
-        subtitle="Menos bla-bla, más cambio real en tu operación."
+        title="Elegir proveedor es elegir resultados"
+        subtitle="Nos contratan por velocidad, claridad y cuidado en la experiencia de usuario."
       >
         <div className="grid md:grid-cols-2 gap-6">
           <ul className="space-y-4">
             {[
-              "Salida 3× más rápida: sprints semanales con entregables visibles.",
-              "Diseño que vende: UI/UX que convierte y crea confianza.",
-              "Arquitectura segura y preparada para crecer.",
-              "Costos claros y sin sorpresas (alcance cerrado).",
+              "Salida más rápida: sprints semanales con entregables visibles.",
+              "Diseño que vende: UI/UX que convierte y genera confianza.",
+              "Arquitectura segura, escalable y con buenas prácticas.",
+              "Costos y alcance claros: sin sorpresas.",
               "Soporte cercano: canal directo con el equipo."
             ].map((t, i) => (
               <li key={i} className="flex items-start gap-3">
@@ -71,19 +69,120 @@ export default function HomePage() {
             ))}
           </ul>
           <div className="glass rounded-3xl p-6">
-            <h4 className="text-xl font-semibold mb-3">Garantías de valor</h4>
+            <h4 className="text-xl font-semibold mb-3">Qué entregamos en cada proyecto</h4>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                ["<14 días", "MVP navegable"],
-                ["+28%", "Tasa de conversión típica"],
-                ["99.9%", "Disponibilidad"],
-                ["NPS 70+", "Relación a largo plazo"]
+                ["Implementación guiada", "Checklist claro y acompañamiento"],
+                ["Integración local", "Yappy/ERP/CRM según necesidad"],
+                ["Capacitación", "Videos cortos y guía paso a paso"],
+                ["Soporte", "Canal dedicado para incidencias"]
               ].map(([metric, label], i) => (
                 <div key={i} className="rounded-2xl border border-white/70 p-4">
-                  <div className="text-3xl font-bold text-primary">{metric}</div>
+                  <div className="text-lg font-bold text-primary">{metric}</div>
                   <div className="text-graytext">{label}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Proyectos detallados */}
+      <Section
+        id="proyectos"
+        eyebrow="Proyectos"
+        title="Cómo se ven los proyectos de cada solución"
+        subtitle="Nos integramos a tu operación: pedimos pocos datos, configuramos, probamos y te acompañamos en la salida."
+      >
+        <div className="space-y-6">
+          {/* A */}
+          <div className="glass rounded-3xl p-6">
+            <h3 className="text-xl font-semibold">WhatsApp Bot + Yappy</h3>
+            <div className="grid md:grid-cols-3 gap-6 mt-4">
+              <div>
+                <div className="font-medium">Qué resuelve</div>
+                <ul className="text-graytext mt-2 list-disc list-inside space-y-1">
+                  <li>Pedidos/reservas sin esperar respuesta humana</li>
+                  <li>Cobro inmediato en el chat (menos abandonos)</li>
+                  <li>Orden: registro automático de pedidos</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-medium">Incluye</div>
+                <ul className="text-graytext mt-2 list-disc list-inside space-y-1">
+                  <li>Flujo de conversación y validaciones</li>
+                  <li>Pago por Yappy y confirmación</li>
+                  <li>Registro en hoja o base de datos</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-medium">Impacto típico</div>
+                <ul className="text-graytext mt-2 list-disc list-inside space-y-1">
+                  <li>Menos mensajes perdidos</li>
+                  <li>Más cobros a la primera</li>
+                  <li>Visibilidad de pedidos y tiempos</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* B */}
+          <div className="glass rounded-3xl p-6">
+            <h3 className="text-xl font-semibold">Copiloto Cotización → Factura (FE)</h3>
+            <div className="grid md:grid-cols-3 gap-6 mt-4">
+              <div>
+                <div className="font-medium">Qué resuelve</div>
+                <ul className="text-graytext mt-2 list-disc list-inside space-y-1">
+                  <li>Evita transcribir datos entre chats y planillas</li>
+                  <li>Menos errores con ITBMS y totales</li>
+                  <li>Formalidad: documentos claros</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-medium">Incluye</div>
+                <ul className="text-graytext mt-2 list-disc list-inside space-y-1">
+                  <li>Plantillas de cotización/factura</li>
+                  <li>PDF y envío por email/WhatsApp</li>
+                  <li>Exportación simple a contabilidad</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-medium">Impacto típico</div>
+                <ul className="text-graytext mt-2 list-disc list-inside space-y-1">
+                  <li>Ahorro de tiempo del equipo</li>
+                  <li>Menos correcciones fiscales</li>
+                  <li>Seguimiento claro de propuestas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* C */}
+          <div className="glass rounded-3xl p-6">
+            <h3 className="text-xl font-semibold">Link-in-Bio Store + WhatsApp + Yappy</h3>
+            <div className="grid md:grid-cols-3 gap-6 mt-4">
+              <div>
+                <div className="font-medium">Qué resuelve</div>
+                <ul className="text-graytext mt-2 list-disc list-inside space-y-1">
+                  <li>Venta sin web compleja</li>
+                  <li>Cobro simple y claro</li>
+                  <li>Canal directo para dudas/post-venta</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-medium">Incluye</div>
+                <ul className="text-graytext mt-2 list-disc list-inside space-y-1">
+                  <li>Página 1-click con catálogo breve</li>
+                  <li>Botón Yappy y confirmación</li>
+                  <li>WhatsApp conectado</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-medium">Impacto típico</div>
+                <ul className="text-graytext mt-2 list-disc list-inside space-y-1">
+                  <li>Salida rápida de campañas</li>
+                  <li>Tasa de cobro más alta</li>
+                  <li>Menos fricción en atención</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -94,7 +193,7 @@ export default function HomePage() {
         id="contacto"
         eyebrow="Hablemos"
         title="Cuéntanos tu objetivo y te proponemos el camino más corto"
-        subtitle="Agenda un diagnóstico sin costo. Te devolvemos un plan y un estimado de ROI."
+        subtitle="Te devolvemos un plan y un estimado de ROI. Sin demos; construimos y entregamos."
       >
         <ContactForm />
       </Section>
