@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
@@ -34,8 +34,8 @@ export default {
           "50%": { transform: "translateY(-10px)" }
         },
         glow: {
-          "0%,100%": { opacity: 0.6 },
-          "50%": { opacity: 1 }
+          "0%,100%": { opacity: "0.6" },
+          "50%": { opacity: "1" }
         }
       },
       animation: {
@@ -45,4 +45,6 @@ export default {
     }
   },
   plugins: []
-} satisfies Config;
+};
+
+export default config;
