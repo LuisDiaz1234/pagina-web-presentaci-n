@@ -1,0 +1,10 @@
+export default function Logo({ className }: { className?: string }) {
+  // SVG basado en tu ícono (azul + punto verde)
+  return (
+    <svg className={className} viewBox="0 0 768 768" xmlns="http://www.w3.org/2000/svg" aria-label="LuLab">
+      <rect rx="160" ry="160" width="768" height="768" fill="#0E76FF"/>
+      <circle cx="528" cy="240" r="64" fill="#10B981"/>
+      <path d="M256 192a64 64 0 0 0-64 64v304a64 64 0 0 0 64 64h224a64 64 0 0 0 0-128H320V256a64 64 0 0 0-64-64z" fill="#ffffff"/>
+    </svg>
+  );
+}
