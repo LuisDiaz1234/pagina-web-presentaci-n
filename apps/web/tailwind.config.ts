@@ -32,15 +32,10 @@ const config: Config = {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" }
-        },
-        glow: {
-          "0%,100%": { opacity: "0.6" },
-          "50%": { opacity: "1" }
         }
       },
       animation: {
-        float: "float 6s ease-in-out infinite",
-        glow: "glow 3s ease-in-out infinite"
+        float: "float 6s ease-in-out infinite"
       }
     }
   },
