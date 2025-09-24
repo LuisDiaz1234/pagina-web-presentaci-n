@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Paleta como CSS variables por si quieres usarlas en CSS puro */
+:root{
+  --primary:#0E76FF;
+  --charcoal:#111827;
+  --graytext:#6B7280;
+  --accent:#10B981;
+  --white:#FFFFFF;
+  --lightbg:#F3F4F6;
+}
+
+html, body, :root { height: 100%; }
+
+body{
+  @apply bg-primary/5 text-charcoal antialiased;
+  background-image: theme('backgroundImage.radial-1');
+  background-attachment: fixed;
+}
+
+/* Glassmorphism elegante */
+.glass{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.55));
+  border: 1px solid rgba(255,255,255,.6);
+  box-shadow: 0 10px 40px rgba(17,24,39,.08);
+}
+
+/* Botón primario */
+.btn-primary{
+  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 font-medium text-white bg-primary hover:bg-primary/90 transition shadow-card;
+}
+
+/* Puntito “lab” vibrando */
+.dot{
+  width: .75rem; height: .75rem;
+  background: var(--accent);
+  border-radius: 9999px;
+  box-shadow: 0 0 0 .35rem rgba(16,185,129,.18);
+  animation: glow 2.8s ease-in-out infinite;
+}
