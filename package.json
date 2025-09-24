@@ -1,0 +1,5 @@
+{
+  "name": "lulab-monorepo",
+  "private": true,
+  "workspaces": ["apps/web"]
+}
